@@ -2,15 +2,15 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="viewport" content="width=800,height=480,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
   <style>
     html,
     body {
-      width: 100%;
-      height: 100%;
+      width: 800px;
+      height: 480px;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -18,20 +18,20 @@
     }
 
     img {
-      position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100vh;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 800px;
+      height: 480px;
       display: block;
-      object-fit: contain;
-      background: #f6f4ee;
+      object-fit: fill;
     }
   </style>
 </head>
 <body>
-  <img id="dashboard" alt="E1002 dashboard" src="https://raw.githubusercontent.com/mofanraul-design/e1002-dashboard-image/main/e1002-clean.png?v=20260609223321">
+  <img id="dashboard" alt="E1002 dashboard" src="https://raw.githubusercontent.com/mofanraul-design/e1002-dashboard-image/main/e1002-clean.png?v=20260609223607">
   <script>
-    document.getElementById("dashboard").src = "https://raw.githubusercontent.com/mofanraul-design/e1002-dashboard-image/main/e1002-clean.png?v=20260609223321-" + Date.now();
+    document.getElementById("dashboard").src = "https://raw.githubusercontent.com/mofanraul-design/e1002-dashboard-image/main/e1002-clean.png?v=20260609223607-" + Date.now();
   </script>
 </body>
 </html>
