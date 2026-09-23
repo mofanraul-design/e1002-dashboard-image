@@ -29,9 +29,16 @@
   </style>
 </head>
 <body>
-  <img id="dashboard" alt="E1002 dashboard" src="https://raw.githubusercontent.com/mofanraul-design/e1002-dashboard-image/main/e1002-clean.png?v=20260923180019">
+  <img id="dashboard" alt="E1002 dashboard" src="e1002-clean.png?v=20260923215015">
   <script>
-    document.getElementById("dashboard").src = "https://raw.githubusercontent.com/mofanraul-design/e1002-dashboard-image/main/e1002-clean.png?v=20260923180019-" + Date.now();
+    const dashboard = document.getElementById("dashboard");
+    const refreshDashboard = () => {
+      dashboard.src = "e1002-clean.png?v=" + Date.now();
+    };
+    dashboard.addEventListener("error", () => {
+      window.setTimeout(refreshDashboard, 60000);
+    });
+    window.setInterval(refreshDashboard, 10 * 60 * 1000);
   </script>
 </body>
 </html>
